@@ -88,18 +88,26 @@ entities:
         type: boolean
         optional: true
         name: button
-  - entity: number
+  - entity: select
     name: Charge current
     category: config
     class: current
     dps:
       - id: 150
         type: integer
-        name: value
-        unit: A
-        range:
-          min: 1
-          max: 1000
+        optional: true
+        name: option
+        mapping:
+          - dps_val: 6
+            value: 6A
+          - dps_val: 8
+            value: 8A
+          - dps_val: 10
+            value: 10A
+          - dps_val: 13
+            value: 13A
+          - dps_val: 16
+            value: 16A
       - id: 152
         type: integer
         name: maximum
